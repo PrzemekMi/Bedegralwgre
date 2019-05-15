@@ -9,80 +9,117 @@ stan = [
      [0,0,0],
      [0,0,0],]
 
-stanX = [
-     [0,0,0],
-     [0,0,0],
-     [0,0,0],]
+for k in range(9):   
+     nowy = int(input("podaj numer dla krzyżyka"))
 
-stan0 = [
-     [0,0,0],
-     [0,0,0],
-     [0,0,0],]
+     
+     #umieszczanie x w tabeli
+     if (nowy == 1):
+          if ( stan[2][0] == 2 or stan[2][0] == 1):
+               break
+          else:
+               stan[2][0] = 1
+     if (nowy == 2):
+          if ( stan[2][1] == 2 or stan[2][1] == 1):
+               break
+          else:
+               stan[2][1] = 1
+     if (nowy == 3):
+          if ( stan[2][2] == 2 or stan[2][2] == 2):
+               break
+          else:
+               stan[2][2] = 1
+     if (nowy == 4):
+          if ( stan[1][0] == 2 or stan[1][0] == 1):
+               break
+          else:
+               stan[1][0] = 1
+     if (nowy == 5):
+          if ( stan[1][1] == 2 or stan[1][1] == 1):
+               break
+          else:
+               stan[1][1] = 1
+     if (nowy == 6):
+          if ( stan[1][2] == 2 or stan[1][2] == 1):
+               break
+          else:
+               stan[1][2] = 1
+     if (nowy == 7):
+          if ( stan[0][0] == 2 or stan[0][0] == 1):
+               break
+          else:
+               stan[0][0] = 1
+     if (nowy == 8):
+          if ( stan[0][1] == 2):
+               break
+          else:
+               stan[0][1] = 1
+     if (nowy == 9):
+          if ( stan[0][2] == 2 or stan[0][2] == 1):
+              break
+          else:
+               stan[0][2] = 1
+     #koniec umieszczania
 
-nowyX = 0
-nowyX = int(input("podaj numer dla krzyżyka"))
+     nowy = int(input("Podaj numer dla kółka"))
 
-#umieszczanie x w tabeli
-if (nowyX == 1):
-     stanX[2][0] = 1
-if (nowyX == 2):
-     stanX[2][1] = 1
-if (nowyX == 3):
-     stanX[2][2] = 1
-if (nowyX == 4):
-     stanX[1][0] = 1
-if (nowyX == 5):
-     stanX[1][1] = 1
-if (nowyX == 6):
-     stanX[1][2] = 1
-if (nowyX == 7):
-     stanX[0][0] = 1
-if (nowyX == 8):
-     stanX[0][1] = 1
-if (nowyX == 9):
-     stanX[0][2] = 1
-#koniec umieszzania
+     #umieszczanie 0 w tabeli
+     if (nowy == 1):
+          if ( stan[2][0] == 2 or stan[2][0] == 1):
+               break
+          else:
+               stan[2][0] = 2
+     if (nowy == 2):
+          if ( stan[2][1] == 2 or stan[2][1] == 1):
+               break
+          else:
+               stan[2][1] = 2
+     if (nowy == 3):
+          if ( stan[2][2] == 2 or stan[2][2] == 2):
+               break
+          else:
+               stan[2][2] = 2
+     if (nowy == 4):
+          if ( stan[1][0] == 2 or stan[1][0] == 1):
+               break
+          else:
+               stan[1][0] = 2
+     if (nowy == 5):
+          if ( stan[1][1] == 2 or stan[1][1] == 1):
+               break
+          else:
+               stan[1][1] = 2
+     if (nowy == 6):
+          if ( stan[1][2] == 2 or stan[1][2] == 1):
+               break
+          else:
+               stan[1][2] = 2
+     if (nowy == 7):
+          if ( stan[0][0] == 2 or stan[0][0] == 1):
+               break
+          else:
+               stan[0][0] = 2
+     if (nowy == 8):
+          if ( stan[0][1] == 2):
+               break
+          else:
+               stan[0][1] = 2
+     if (nowy == 9):
+          if ( stan[0][2] == 2 or stan[0][2] == 1):
+              break
+          else:
+               stan[0][2] = 2
+     #koniec umieszczania
 
-nowy0 = 0
-nowy0 = int(input("Podaj numer dla kółka"))
-
-#umieszczanie 0 w tabeli
-if (nowy0 == 1):
-     stan0[2][0] = 1
-if (nowy0 == 2):
-     stan0[2][1] = 1
-if (nowy0 == 3):
-     stan0[2][2] = 1
-if (nowy0 == 4):
-     stan0[1][0] = 1
-if (nowy0 == 5):
-     stan0[1][1] = 1
-if (nowy0 == 6):
-     stan0[1][2] = 1
-if (nowy0 == 7):
-     stan0[0][0] = 1
-if (nowy0 == 8):
-     stan0[0][1] = 1
-if (nowy0 == 9):
-     stan0[0][2] = 1
-#koniec umieszzania
-
-#wypisywanie tablicy X
-for row in stanX:
+#wypisywanie tablicy
+for row in stan:
      print()
      for element in row:
           print(element,end=" ")
 #koniec wypisywania
 
-#wypisywanie tablicy 0
-for row in stan0:
-     print()
-     for element in row:
-          print(element,end=" ")
-#koniec wypisywania
 
 for i in range(3):
-     print()
      for j in range(3):
           if stanX[i][j] == 1:
                print("jeden")
